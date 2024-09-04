@@ -1,0 +1,7 @@
+[
+    { "id": "1", "title": "ร้านเฉลิมศรี", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-1.jpg" },
+    { "id": "2", "title": "กะเพราป้าศรีรสเด็ด", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-2.jpg"  },
+    { "id": "3", "title": "Pizza Naparema", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-3.jpg"  },
+    { "id": "4", "title": "Kyokitsu Japan", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-4.jpg"  },
+    { "id": "5", "title": "ตี๋เล็กตื๋ม", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-5.jpg" }
+]

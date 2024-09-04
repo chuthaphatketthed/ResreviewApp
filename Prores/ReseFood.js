@@ -3,16 +3,18 @@ import { Dimensions, FlatList, Image, Text, View } from "react-native";
 
 export default function ReseFood(props) {
     const food = [
-        { "id": "1", "title": "ร้านเฉลิมศรี", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-1.jpg" },
-        { "id": "2", "title": "กะเพราป้าตื๋มรสเด็ด", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-2.jpg"  },
-        { "id": "3", "title": "Pizza Naparema", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-3.jpg"  },
-        { "id": "4", "title": "Kyokitsu Japan", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-4.jpg"  },
-        { "id": "5", "title": "ตี๋เล็กตื๋ม", "uri": "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/all/trip-5.jpg" }
+        [
+            { "id": "1", "title": "ร้านเฉลิมศรี", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food1.jpeg" },
+            { "id": "2", "title": "กะเพราป้าศรีรสเด็ด", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food2.jpeg"  },
+            { "id": "3", "title": "italian Naparema", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food3.jpeg"  },
+            { "id": "4", "title": "Kyokitsu Japan", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food4.jpeg"  },
+            { "id": "5", "title": "ตี๋เล็กติ่มซํา", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food5.jpg" }
+        ]
     ];
     const [onlineTours, setOnlineTours] = useState([]);
     const loadOnlineTours = async () => {
         try{
-            let text = await fetch('https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/json/trips.json');
+            let text = await fetch('https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/json/food.json');
             let data = await text.json();
             console.log("Load Data : " , data);
             //SET STATE
@@ -50,15 +52,15 @@ export default function ReseFood(props) {
                                     style={{
                                         marginTop: -30,
                                         height: 30,
-                                        width: 200,
+                                        width: 280,
                                         paddingHorizontal: 10,
-                                        backgroundColor: "black",
-                                        opacity: 0.5,
+                                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                        opacity: 1,
                                         borderBottomLeftRadius: 10,
                                         borderBottomRightRadius: 10,
                                     }}
                                 >
-                                    <Text style={{ fontSize: 20, color: "white" }}>
+                                    <Text style={{ fontSize: 20,  color: "white",textAlign:'center', fontWeight:'bold' }}>
                                         {item.title}
                                     </Text>
                                 </View>

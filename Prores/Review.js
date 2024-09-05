@@ -5,12 +5,12 @@ import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
-export default function Card() {
+export default function Review() {
     return (
         <ScrollView>
         <View style={{ padding: 20 }}>
             <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10 ,alignItems:'center',paddingRight: 10}}>
-                <Entypo name="chevron-left" size={30} color="black" />
+                {/* <Entypo name="chevron-left" size={30} color="black" /> */}
                 <Text style={{ fontSize: 30 }}>รีวิว</Text>
                 <AntDesign name="search1" size={30} color="black" />
             </View>

@@ -3,7 +3,8 @@ import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
 import { Dimensions, FlatList, Image, ScrollView, Text, View } from "react-native";
 
-export default function ReseFood(props) {
+export default function ReseFood(props) 
+{
 
     const navigation = useNavigation();
     const food = [
@@ -75,6 +76,7 @@ export default function ReseFood(props) {
                     }}
                     keyExtractor={(item) => item.id}
                 />
+                {/* ท้าย flatList */}
                 <View style={{ margin: 10 }}>
                     <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
                         ร้านอาหารแนะนำน่ากิน

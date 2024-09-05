@@ -16,8 +16,8 @@ export default function App() {
     // <Rese/>
     // <ReseFood/>
     <NavigationContainer>
-      {/* <HomeStack/> */}
-      <BottomTab/>
+      <HomeStack/>
+      {/* <BottomTab/> */}
     </NavigationContainer>
   );
 }

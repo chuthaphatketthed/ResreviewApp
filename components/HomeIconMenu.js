@@ -3,6 +3,7 @@ import React from "react";
 import { View, TextInput, } from "react-native";
 import MyIcon from "../components/MyIcon";
 import { useNavigation } from "@react-navigation/native";
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function HomeIconMenu() {
   const navigation = useNavigation();
@@ -14,9 +15,9 @@ export default function HomeIconMenu() {
             </View>
             {/* View ก้อนที่ 2 */}
             <View style={{ flexDirection: "row", marginTop: 10 }}>
-                <MyIcon title="Flex" name="th" size={30} color="orange" onPress={() => { navigation.navigate("ReseFood"); }} />
-                <MyIcon title="xxx" name="question" size={30} color="orange" />
-                <MyIcon title="xxx" name="question" size={30} color="orange" />
+                <MyIcon title="จองร้านอาหาร" name="cutlery" size={30} color="orange" onPress={() => { navigation.navigate("ReseFood"); }} />
+                <MyIcon title="จองโรงแรม" name="bed" size={30} color="orange" onPress={() => { navigation.navigate("Hotel"); }} />
+                <MyIcon title="รีวิวโรงแรม" name="star" size={30} color="orange" onPress={() => { navigation.navigate("Review"); }} />
                 <MyIcon title="xxx" name="question" size={30} color="orange" />
             </View>
             {/* View ก้อนที่ 3 */}

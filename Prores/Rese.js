@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
 import Fontisto from '@expo/vector-icons/Fontisto';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 export default function Hotel() {
 
+
+    const navigation = useNavigation();
     const onPressButton = function () {
         console.log("button is pressed!!!");
     };
@@ -12,9 +15,9 @@ export default function Hotel() {
 
     return (
         <ScrollView>
-            <View style={{ padding: 20 }}>
+            <View style={{ padding: 30 }}>
                 <View style={{ alignSelf: 'flex-start', marginBottom: -30 }}>
-                    <AntDesign name="arrowleft" size={24} color="black" />
+                    
                 </View>
                 <View style={{ alignSelf: 'flex-end', marginBottomBottom: -50 }}>
                     <Fontisto name="zoom" size={24} color="black" />

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
-import { Dimensions, FlatList, Image, ScrollView, Text, View } from "react-native";
+import { Dimensions, FlatList, Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 export default function ListHotle(props) {
-
+    const onPressButton = function () {
+        console.log("button is pressed!!!");
+    };
     const navigation = useNavigation();
     const food = [
         [
@@ -38,7 +40,7 @@ export default function ListHotle(props) {
             <View style={{ padding: 20, marginTop: 10 }}>
                 <Text style={{ fontSize: 20, alignSelf: 'center', fontWeight: 'bold' }}>โรงแรมราคาดีในประเทศไทย</Text>
                 <View style={{ flexDirection: 'row' }}>
-                    <Text style={{ fontSize: 30, marginTop: 50, fontWeight: 'bold' }}>จองโรงแรมที่ถูกใจของคุณ</Text>
+                    <Text style={{ fontSize: 30, marginTop: 40, fontWeight: 'bold' }}>จองโรงแรมที่ถูกใจของคุณ</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={{ fontSize: 20, paddingBottom: 10 }}>โรงแรมน่าอยู๋ วิวดี!!</Text>
@@ -86,136 +88,276 @@ export default function ListHotle(props) {
                 <View>
                     <Image
                         style={{ width: Dimensions.get("screen").width / 3.0 - 20, height: 170, borderRadius: 10, marginTop: 10 }}
-                        source={require("../assets/projectres/china2.jpg")} />
+                        source={require("../assets/img/hotellist1.jpg")} />
                     <Image
                         style={{ width: Dimensions.get("screen").width / 3.0 - 20, height: 170, borderRadius: 10, marginTop: 10 }}
-                        source={require("../assets/projectres/shabu1.jpg")} />
+                        source={require("../assets/img/hotellist2.jpg")} />
                     <Image
                         style={{ width: Dimensions.get("screen").width / 3.0 - 20, height: 170, borderRadius: 10, marginTop: 10 }}
-                        source={require("../assets/projectres/pizza1.jpg")} />
+                        source={require("../assets/img/hotellist3.jpg")} />
                     <Image
                         style={{ width: Dimensions.get("screen").width / 3.0 - 20, height: 170, borderRadius: 10, marginTop: 10 }}
-                        source={require("../assets/projectres/thaino1.jpg")} />
+                        source={require("../assets/img/hotellist4.jpg")} />
                     <Image
                         style={{ width: Dimensions.get("screen").width / 3.0 - 20, height: 170, borderRadius: 10, marginTop: 10 }}
-                        source={require("../assets/projectres/steak1.jpg")} />
+                        source={require("../assets/img/hotellist5.jpg")} />
                     <Image
                         style={{ width: Dimensions.get("screen").width / 3.0 - 20, height: 170, borderRadius: 10, marginTop: 10 }}
-                        source={require("../assets/projectres/sushi1.jpg")} />
+                        source={require("../assets/img/hotellist6.jpg")} />
                     <Image
                         style={{ width: Dimensions.get("screen").width / 3.0 - 20, height: 170, borderRadius: 10, marginTop: 10 }}
-                        source={require("../assets/projectres/bbq1.jpg")} />
+                        source={require("../assets/img/hotellist7.jpg")} />
                 </View>
                 {/* ข้อความกลุ่ม 1 */}
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -1250, fontWeight: 'bold' }}>
-                        ร้านรื่นรส
+                    Evergreen Suites
                     </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Hotel')}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
-                    <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -1220 }}>
-                        ภัตตาคารอาหารจีนรสเด็ด
+                    <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -1220 }}>
+                    โรงแรมสไตล์โมเดิร์นใจกลางเมือง มีบรรยากาศผ่อนคลายเหมาะกับการพักผ่อนในวันหยุด
                     </Text>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -1120, textDecorationLine: 'underline' }}>
-                        เวลาเปิด-ปิด:เปิดทุกวัน ตั้งแต่เวลา 09:00-21:00
+                    เวลาเปิด-ปิด: เปิดทุกวัน 24 ชั่วโมง
                     </Text>
                 </View>
                 {/* 2 */}
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -1070, fontWeight: 'bold' }}>
-                        ร้าน Halu
+                    The Horizon Retreat
                     </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Hotel2')}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
-                    <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -1040 }}>
-                        ร้านชาบูหมาล่าส่งตรงจากประเทศจีน
+                    <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -1040 }}>
+                    รีสอร์ทสุดหรูท่ามกลางธรรมชาติ ตกแต่งด้วยสถาปัตยกรรมที่เรียบง่ายแต่หรูหรา
                     </Text>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -940, textDecorationLine: 'underline' }}>
-                        เวลาเปิด-ปิด:เปิดทุกวัน ตั้งแต่เวลา 8:00-23:00
+                    เวลาเปิด-ปิด: เปิดทุกวัน 24 ชั่วโมง
                     </Text>
                 </View>
                 {/* 3 */}
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -890, fontWeight: 'bold' }}>
-                        ร้าน Pizza manoliz
+                        Skyline Resort
                     </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Hotel3')}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
-                    <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -860 }}>
-                        พิซซ่าร้านดังจากประเทศอิตาลี
+                    <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -860 }}>
+                     รีสอร์ทสุดหรูพร้อมวิวทะเลแบบล้อมตัว 
                     </Text>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -760, textDecorationLine: 'underline' }}>
-                        เวลาเปิด-ปิด:เปิด จ-ส ตั้งแต่เวลา 09:00-21:00
+                    เวลาเปิด-ปิด: เปิดทุกวัน 24 ชั่วโมง
                     </Text>
                 </View>
                 {/* 4 */}
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -710, fontWeight: 'bold' }}>
-                        ร้านก๋วยเตี๋ยวป้าแจ๋ว
+                    Urban Oasis Hotel
                     </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Hotel4')}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
-                    <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -680 }}>
-                        ร้านก๋วยเตี๋ยวเนื้อรสชาติดีที่เปฺิดมานานกว่า 40 ปี
+                    <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -680 }}>
+                    โรงแรมหรูใจกลางเมืองที่ผสมผสานความทันสมัยและความสะดวกสบาย
                     </Text>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -580, textDecorationLine: 'underline' }}>
-                        เวลาเปิด-ปิด:เปิดทุกวัน ตั้งแต่เวลา 15:00-20:00
+                    เวลาเปิด-ปิด: เปิดทุกวัน 24 ชั่วโมง
                     </Text>
                 </View>
                 {/* 5 */}
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -530, fontWeight: 'bold' }}>
-                        ร้าน Steak Minihub
+                    Damview Resort
                     </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Hotel5')}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
-                    <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -500 }}>
-                        ร้านสเต็กจากญี่ปุ่นที่ใช้เนื้อเกรด A5
+                    <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -500 }}>
+                    รีสอร์ทสุดชิวตั้งอยู่กลางเขื่อน พร้อมวิวทิวทัศน์ของทะเลสาบและภูเขา มีบริการกิจกรรมกลางแจ้ง
                     </Text>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -400, textDecorationLine: 'underline' }}>
-                        เวลาเปิด-ปิด:เปิด จ-พฤ ตั้งแต่เวลา 17:00-23:00
+                    เวลาเปิด-ปิด: เปิดทุกวัน 24 ชั่วโมง
                     </Text>
                 </View>
                 {/* 6 */}
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -350, fontWeight: 'bold' }}>
-                        ร้าน Sushi Namake
+                    Riverside Grand Hotel
                     </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Hotel6')}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
-                    <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -320 }}>
-                        ร้านซูชิระดับ 1 ดาวมิชลินสตาร์
+                    <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -320 }}>
+                    โรงแรมที่มีบริการห้องสวีทสะดวกสบาย พร้อมบาร์และร้านอาหารที่มีวิวเมืองตระการตา
                     </Text>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -220, textDecorationLine: 'underline' }}>
-                        เวลาเปิด-ปิด:เปิด จ-ศ ตั้งแต่เวลา 19:00-01:00
+                    เวลาเปิด-ปิด: เปิดทุกวัน 24 ชั่วโมง
                     </Text>
                 </View>
                 {/* 7 */}
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -170, fontWeight: 'bold' }}>
-                        ร้าน Konum BBQ
+                    Central Plaza Suites
                     </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Hotel7')}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
-                    <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -140 }}>
-                        ร้านปิ้งย่างสไตล์เกาหลีที่มีวัตถุดิบเกรดคุณภาพ
+                    <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -140 }}>
+                    โรงแรมบูติกที่โดดเด่นด้วยการตกแต่งสไตล์โมเดิร์น ตั้งอยู่ในย่านธุรกิจและแหล่งช็อปปิ้งหลัก
                     </Text>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -40, textDecorationLine: 'underline' }}>
-                        เวลาเปิด-ปิด:เปิดทุกวัน ตั้งแต่เวลา 11:00-24:00
+                    เวลาเปิด-ปิด: เปิดทุกวัน 24 ชั่วโมง
                     </Text>
                 </View>
 

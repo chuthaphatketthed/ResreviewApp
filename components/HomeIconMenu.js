@@ -15,17 +15,17 @@ export default function HomeIconMenu() {
             </View>
             {/* View ก้อนที่ 2 */}
             <View style={{ flexDirection: "row", marginTop: 10 }}>
-                <MyIcon title="จองร้านอาหาร" name="cutlery" size={30} color="orange" onPress={() => { navigation.navigate("ReseFood"); }} />
-                <MyIcon title="จองโรงแรม" name="bed" size={30} color="orange" onPress={() => { navigation.navigate("ListHotle"); }} />
-                <MyIcon title="รีวิวโรงแรม" name="star" size={30} color="orange" onPress={() => { navigation.navigate("Review"); }} />
-                <MyIcon title="xxx" name="question" size={30} color="orange" />
+                <MyIcon title="จองร้านอาหาร" name="cutlery" size={30} color="#E59E6D" onPress={() => { navigation.navigate("ReseFood"); }} />
+                <MyIcon title="จองโรงแรม" name="bed" size={30} color="#E59E6D" onPress={() => { navigation.navigate("ListHotle"); }} />
+                <MyIcon title="รีวิวโรงแรม" name="star" size={30} color="#E59E6D" onPress={() => { navigation.navigate("Review"); }} />
+                <MyIcon title="xxx" name="question" size={30} color="#E59E6D" />
             </View>
             {/* View ก้อนที่ 3 */}
             <View style={{ flexDirection: "row", marginTop: 10 }}>
-                <MyIcon title="xxx" name="question" size={30} color="orange" />
-                <MyIcon title="xxx" name="question" size={30} color="orange" />
-                <MyIcon title="xxx" name="question" size={30} color="orange" />
-                <MyIcon title="More" name="ellipsis-h" size={30} color="orange" />
+                <MyIcon title="xxx" name="question" size={30} color="#E59E6D" />
+                <MyIcon title="xxx" name="question" size={30} color="#E59E6D" />
+                <MyIcon title="xxx" name="question" size={30} color="#E59E6D" />
+                <MyIcon title="More" name="ellipsis-h" size={30} color="#E59E6D" />
             </View>
         </View>
     );

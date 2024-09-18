@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
-import { Dimensions, FlatList, Image, ScrollView, Text, View } from "react-native";
+import { Dimensions, FlatList, Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 export default function ReseFood(props) 
-{
-
+{   
+    const onPressButton = function () {
+        console.log("button is pressed!!!");
+    };
     const navigation = useNavigation();
     const food = [
         [
@@ -110,6 +112,26 @@ export default function ReseFood(props)
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -1250 ,fontWeight:'bold'}}>
                         ร้านรื่นรส
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -1220 }}>
@@ -126,6 +148,26 @@ export default function ReseFood(props)
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -1070 ,fontWeight:'bold'}}>
                         ร้าน Halu
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -1040 }}>
@@ -142,6 +184,26 @@ export default function ReseFood(props)
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -890 ,fontWeight:'bold'}}>
                         ร้าน Pizza manoliz
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -860 }}>
@@ -158,6 +220,26 @@ export default function ReseFood(props)
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -710 ,fontWeight:'bold'}}>
                         ร้านก๋วยเตี๋ยวป้าแจ๋ว
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -680 }}>
@@ -174,6 +256,26 @@ export default function ReseFood(props)
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -530 ,fontWeight:'bold'}}>
                         ร้าน Steak Minihub
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -500 }}>
@@ -190,11 +292,51 @@ export default function ReseFood(props)
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -350 ,fontWeight:'bold'}}>
                         ร้าน Sushi Namake
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -320 }}>
                         ร้านซูชิระดับ 1 ดาวมิชลินสตาร์
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 15, marginTop: -220 ,textDecorationLine:'underline'}}>
@@ -206,6 +348,26 @@ export default function ReseFood(props)
                     <Text style={{ paddingLeft: 210, fontSize: 30, marginTop: -170 ,fontWeight:'bold'}}>
                         ร้าน Konum BBQ
                     </Text>
+                    <TouchableOpacity onPress={onPressButton}>
+                        <View style={{
+                            backgroundColor: "#D3BC8D",
+                            borderRadius: 20,
+                            width: 150,
+                            height: 40,
+                            marginLeft: 230,
+                            marginTop: 45,
+                            justifyContent: 'center', // จัดข้อความให้อยู่ตรงกลางแนวตั้ง
+                            alignItems: 'center' // จัดข้อความให้อยู่ตรงกลางแนวนอน
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'black',
+                                fontWeight: 'bold'
+                            }}>
+                                จองโรงแรม
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View>
                     <Text style={{ paddingLeft: 210, fontSize: 20, marginTop: -140 }}>

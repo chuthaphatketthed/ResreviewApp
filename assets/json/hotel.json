@@ -1,7 +1,7 @@
 [
-    { "id": "1", "title": "ร้านเฉลิมศรี", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food1.jpeg" },
-    { "id": "2", "title": "กะเพราป้าศรีรสเด็ด", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food2.jpeg"  },
-    { "id": "3", "title": "italian Naparema", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food3.jpeg"  },
-    { "id": "4", "title": "Kyokitsu Japan", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food4.jpeg"  },
-    { "id": "5", "title": "ตี๋เล็กติ่มซํา", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/projectres/food5.jpg" }
+    { "id": "1", "title": "Fukubuki", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/img/hotelflat1.jpg" },
+    { "id": "2", "title": "livelySun Hotel", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/img/hotelflat2.jpg"  },
+    { "id": "3", "title": "Saru", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/img/hotelflat3.jpg"  },
+    { "id": "4", "title": "Kakaki Hotel", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/img/hotelflat4.jpg"  },
+    { "id": "5", "title": "Hotel Luna", "uri": "https://raw.githubusercontent.com/chuthaphatketthed/ResreviewApp/main/assets/img/hotelflat5.jpg" }
 ]

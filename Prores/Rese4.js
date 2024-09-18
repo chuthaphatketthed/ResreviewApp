@@ -3,13 +3,19 @@ import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
 import Fontisto from '@expo/vector-icons/Fontisto';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import MapView, { Marker } from 'react-native-maps';
 export default function Rese4() {
 
 
     const navigation = useNavigation();
-    const onPressButton = function () {
+    const onPressButton = () => {
+        Alert.alert("จองเรียบร้อย", "การจองของคุณเสร็จเรียบร้อยแล้ว", [
+            { text: "ตกลง", onPress: () => console.log("Booking confirmed!") }
+        ]);
+    }; {
         console.log("button is pressed!!!");
+        
     };
 
 
@@ -70,6 +76,27 @@ export default function Rese4() {
                     <View>
                         <Text style={{ color: "black", fontSize: 30, marginLeft: -69, marginTop: 30, fontWeight: 'bold' }}>$139</Text>
                     </View>
+                </View>
+                <View style={{ marginTop: 20 }}>
+                    <Text style={{ fontSize: 20, marginBottom: 10 }}>สถานที่ตั้ง:</Text>
+                    <MapView
+                        style={{ height: 300, width: '100%' }}
+                        initialRegion={{
+                            latitude: 13.733633,  // แก้ไขเป็นพิกัดของสถานที่ที่ต้องการ
+                            longitude: 100.665941, // แก้ไขเป็นพิกัดของสถานที่ที่ต้องการ
+                            latitudeDelta: 0.0922,
+                            longitudeDelta: 0.0421,
+                        }}
+                    >
+                        <Marker
+                            coordinate={{
+                                latitude: 13.733633, // แก้ไขเป็นพิกัดของสถานที่ที่ต้องการ
+                                longitude: 100.665941, // แก้ไขเป็นพิกัดของสถานที่ที่ต้องการ
+                            }}
+                            title="Urban Oasis Hotel"
+                            description="สถานที่ตั้งของโรงแรม"
+                        />
+                    </MapView>
                 </View>
                 <TouchableOpacity onPress={onPressButton}>
                     <View style={{ padding: 25, backgroundColor: "#D3BC8D", borderRadius: 40, marginTop: 10 }}>

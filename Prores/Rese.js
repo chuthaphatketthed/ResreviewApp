@@ -20,7 +20,7 @@ export default function Hotel() {
                     
                 </View>
                 <View style={{ alignSelf: 'flex-end', marginBottomBottom: -50 }}>
-                    <Fontisto name="zoom" size={24} color="black" />
+                    {/* <Fontisto name="zoom" size={24} color="black" /> */}
                 </View>
                 <Text style={{ fontSize: 20, alignSelf: 'center', paddingBottom: 10, marginTop: -25 }}> โรงแรม </Text>
                 <View style={{ flexDirection: "row" }}>

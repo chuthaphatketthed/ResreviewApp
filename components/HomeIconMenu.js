@@ -16,7 +16,7 @@ export default function HomeIconMenu() {
             {/* View ก้อนที่ 2 */}
             <View style={{ flexDirection: "row", marginTop: 10 }}>
                 <MyIcon title="จองร้านอาหาร" name="cutlery" size={30} color="orange" onPress={() => { navigation.navigate("ReseFood"); }} />
-                <MyIcon title="จองโรงแรม" name="bed" size={30} color="orange" onPress={() => { navigation.navigate("Hotel"); }} />
+                <MyIcon title="จองโรงแรม" name="bed" size={30} color="orange" onPress={() => { navigation.navigate("ListHotle"); }} />
                 <MyIcon title="รีวิวโรงแรม" name="star" size={30} color="orange" onPress={() => { navigation.navigate("Review"); }} />
                 <MyIcon title="xxx" name="question" size={30} color="orange" />
             </View>

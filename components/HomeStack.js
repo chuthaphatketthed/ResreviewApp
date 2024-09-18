@@ -5,6 +5,7 @@ import Home from '../screens/Home';
 import Hotel from '../Prores/Rese';
 import Review from '../Prores/Review';
 import Rese from '../Prores/Rese';
+import ListHotle from '../Prores/ListHotle';
 
 
 const Stack = createStackNavigator();
@@ -31,6 +32,11 @@ export default function HomeStack() {
             name="Review"
             component={Review}
             options={{ title: "รีวิวโรงแรม" }}
+          /> 
+          <Stack.Screen
+            name="ListHotle"
+            component={ListHotle}
+            options={{ title: "โรงแรม" }}
           /> 
         </Stack.Navigator>
       );

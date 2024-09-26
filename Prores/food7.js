@@ -5,19 +5,40 @@ import Fontisto from '@expo/vector-icons/Fontisto';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-export default function food7() {
+import AsyncStorage from '@react-native-async-storage/async-storage';
+export default function Food7() {
 
 
     const navigation = useNavigation();
-    const onPressButton = () => {
-        Alert.alert("จองเรียบร้อย", "การจองของคุณเสร็จเรียบร้อยแล้ว", [
-            { text: "ตกลง", onPress: () => console.log("Booking confirmed!") }
-        ]);
-    }; {
-        console.log("button is pressed!!!");
-        
-    };
-
+    const handleBooking = async () => {
+        const bookingData = {
+          restaurantName: "ร้าน Konum BBQ ",
+          bookingDate: new Date().toLocaleDateString(),
+          guests: 2,
+        };
+    
+        try {
+          // Load existing bookings
+          const savedBookings = await AsyncStorage.getItem('bookings');
+          const bookings = savedBookings ? JSON.parse(savedBookings) : [];
+    
+          // Save the new booking
+          bookings.push(bookingData);
+          await AsyncStorage.setItem('bookings', JSON.stringify(bookings));
+    
+          // Alert the user and navigate to the booking confirmation screen
+          Alert.alert("จองเรียบร้อย", "การจองของคุณเสร็จเรียบร้อยแล้ว", [
+            {
+              text: "ตกลง",
+              onPress: () => {
+                navigation.navigate('BookingConfirmation');
+              },
+            },
+          ]);
+        } catch (error) {
+          console.error('Failed to save booking:', error);
+        }
+      };
 
     return (
         <ScrollView>
@@ -61,9 +82,7 @@ export default function food7() {
                     <Text style={{ fontSize: 20, fontWeight: 'bold' }}> 10 ส.ค.</Text>
                     <AntDesign name="arrowright" size={24} color="black" />
                     <Text style={{ fontSize: 20, fontWeight: 'bold' }}> 16 ส.ค.</Text>
-                    <FontAwesome name="bed" size={24} color="black" style={{ marginLeft: 210 }} />
-                    <Text style={{ fontSize: 20, fontWeight: 'bold' }}> 1</Text>
-                    <AntDesign name="team" size={24} style={{ marginLeft: 10 }} color="black" />
+                    <AntDesign name="team" size={24} style={{ marginLeft: 240 }} color="black" />
                     <Text style={{ fontSize: 20, fontWeight: 'bold' }}> 2</Text>
                 </View>
                 <View style={{ flexDirection: 'row', marginTop: 10, padding: 5 }}>
@@ -71,7 +90,7 @@ export default function food7() {
                     <Text style={{ color: "red", fontSize: 20, marginLeft: 5, marginTop: 10 }}>FoodinThai.com</Text>
                     <Text style={{ color: "black", fontSize: 15, marginTop: 37, marginLeft: -130 }}>ยกเลิกได้ฟรีถึงวันที่ 20/08/22</Text>
                     <View style={{ marginLeft: 100 }}>
-                        <Text style={{ color: "grey", fontSize: 20, marginLeft: 175, marginTop: 10, textDecorationLine: 'line-through' }}>$49</Text>
+                        <Text style={{ color: "grey", fontSize: 20, marginLeft: 155, marginTop: 10, textDecorationLine: 'line-through' }}>$49</Text>
                     </View>
                     <View>
                         <Text style={{ color: "black", fontSize: 30, marginLeft: -69, marginTop: 30, fontWeight: 'bold' }}>$29</Text>
@@ -98,7 +117,7 @@ export default function food7() {
                         />
                     </MapView>
                 </View>
-                <TouchableOpacity onPress={onPressButton}>
+                <TouchableOpacity onPress={handleBooking}>
                     <View style={{ padding: 25, backgroundColor: "#D3BC8D", borderRadius: 40, marginTop: 10 }}>
                         <Text style={{ fontSize: 20, textAlign: "center", color: 'black', fontWeight: 'bold' }}>
                             จองเลย

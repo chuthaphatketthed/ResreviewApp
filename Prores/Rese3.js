@@ -5,19 +5,33 @@ import Fontisto from '@expo/vector-icons/Fontisto';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 export default function Rese3() {
 
 
     const navigation = useNavigation();
-    const onPressButton = () => {
-        Alert.alert("จองเรียบร้อย", "การจองของคุณเสร็จเรียบร้อยแล้ว", [
-            { text: "ตกลง", onPress: () => console.log("Booking confirmed!") }
-        ]);
-    }; {
-        console.log("button is pressed!!!");
-        
-    };
+    const onPressButton = async () => {
+        const bookingDetails = {
+            hotelName: 'Skyline Resort',
+            checkInDate: '25 ส.ค.',
+            checkOutDate: '28 ส.ค.',
+            rooms: 1,
+            guests: 2,
+        };
 
+        try {
+            const existingBookings = await AsyncStorage.getItem('hotelBookings');
+            const updatedBookings = existingBookings ? JSON.parse(existingBookings) : [];
+            updatedBookings.push(bookingDetails);
+            await AsyncStorage.setItem('hotelBookings', JSON.stringify(updatedBookings));
+            Alert.alert("จองเรียบร้อย", "การจองของคุณเสร็จเรียบร้อยแล้ว", [
+                { text: "ตกลง", onPress: () => navigation.navigate('HotelBookingConfirmationScreen') }
+            ]);
+        } catch (error) {
+            console.error('Failed to save booking:', error);
+            Alert.alert('เกิดข้อผิดพลาด', 'ไม่สามารถบันทึกการจองได้');
+        }
+    };
 
     return (
         <ScrollView>

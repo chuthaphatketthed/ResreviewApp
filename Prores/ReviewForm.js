@@ -36,9 +36,9 @@ export default function ReviewFormScreen({ navigation }) {
           style={styles.picker}
           onValueChange={(itemValue) => setSelectedTopic(itemValue)}
         >
-          <Picker.Item label="พบเจอ Bug" value="topic1" />
-          <Picker.Item label="แจ้งปัญหาเกี่ยวกับที่พัก" value="topic2" />
-          <Picker.Item label="แจ้งปัญหาเกี่ยวกับร้านอาหาร" value="topic3" />
+          <Picker.Item label="พบเจอ Bug" value="พบเจอ Bug" />
+          <Picker.Item label="แจ้งปัญหาเกี่ยวกับที่พัก" value="แจ้งปัญหาเกี่ยวกับที่พัก" />
+          <Picker.Item label="แจ้งปัญหาเกี่ยวกับร้านอาหาร" value="แจ้งปัญหาเกี่ยวกับร้านอาหาร" />
           {/* เพิ่มหัวข้ออื่น ๆ ที่ต้องการ */}
         </Picker>
       </View>

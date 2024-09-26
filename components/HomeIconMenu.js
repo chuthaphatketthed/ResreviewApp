@@ -18,15 +18,13 @@ export default function HomeIconMenu() {
                 <MyIcon title="จองร้านอาหาร" name="cutlery" size={30} color="#E59E6D" onPress={() => { navigation.navigate("ReseFood"); }} />
                 <MyIcon title="จองโรงแรม" name="bed" size={30} color="#E59E6D" onPress={() => { navigation.navigate("ListHotle"); }} />
                 <MyIcon title="รีวิวโรงแรม" name="star" size={30} color="#E59E6D" onPress={() => { navigation.navigate("Review"); }} />
-                <MyIcon title="แจ้งปํญหา" name="bullhorn" size={30} color="#E59E6D" onPress={() => { navigation.navigate("ReviewForm"); }} />
             </View>
             {/* View ก้อนที่ 3 */}
-            {/* <View style={{ flexDirection: "row", marginTop: 10 }}>
-                <MyIcon title="xxx" name="question" size={30} color="#E59E6D" />
-                <MyIcon title="xxx" name="question" size={30} color="#E59E6D" />
-                <MyIcon title="xxx" name="question" size={30} color="#E59E6D" />
-                <MyIcon title="More" name="ellipsis-h" size={30} color="#E59E6D" />
-            </View> */}
+            <View style={{ flexDirection: "row", marginTop: 10 }}>
+                <MyIcon title="รายการจองร้านอาหาร" name="book" size={30} color="#E59E6D" onPress={() => { navigation.navigate("BookingConfirmation"); }} />
+                <MyIcon title="รายการจองโรงแรม" name="list-alt" size={30} color="#E59E6D" onPress={() => { navigation.navigate("HotelBookingConfirmationScreen"); }} />
+                <MyIcon title="แจ้งปํญหา" name="bullhorn" size={30} color="#E59E6D" onPress={() => { navigation.navigate("ReviewForm"); }} />
+            </View>
         </View>
     );
 }
